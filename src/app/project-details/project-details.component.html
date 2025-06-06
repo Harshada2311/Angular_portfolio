@@ -1,0 +1,73 @@
+    
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Project Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a routerLink="/hero">Home</a></li>
+            <li class="current">Project Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container">
+      
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" *ngIf="project">
+            <div class="services-list">
+              <a href="#" class="active">Full Stack Developer</a>
+              <a href="#">Software Development</a>
+              <a href="#">Product Co-ordinator</a>
+              <a href="#">Frontend Developer</a>
+              <!--<a href="#">Marketing</a>-->
+
+            </div>
+
+            <h4> <a href="{{project.live}}">{{project.title}}</a></h4>
+            <h6><a href="{{project.github}}">GitHub</a></h6>
+            <p><!-- Developed a feature-rich dashboard using Angular
+              to improve data visualization.
+              Integrated REST APIs for smooth frontendbackend communication.
+              Optimized MySQL queries, reducing response time
+              and improving performance by 30%.
+              Implemented advanced data visualization tools for
+              better insights. -->
+             {{project.description}}
+            </p>
+          </div>
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" *ngIf="project">
+            <!-- <img src="assets/img/services.jpg" alt="" class="img-fluid services-img"> -->
+            <img src="{{project.image}}" alt="{{project.title}}" class="img-fluid services-img">
+            <h3>{{project.title}}</h3>  
+            <p>
+              <!-- Viewbox-World, a data archiving visualization platform designed to efficiently manage large
+              datasets.
+              The frontend is built using angular and back end developed in asp.net core, communicates with a
+              mysql database, -->
+              {{project.description}}
+            </p>
+            <ul>
+              <li *ngFor="let point of project.highlights">
+                <i class="bi bi-check-circle"></i> <span>{{point}}</span></li>
+              
+            </ul>
+            <p *ngFor="let para of project.paragraphs">
+                {{para}}
+           </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+<router-outlet></router-outlet>

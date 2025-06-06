@@ -1,0 +1,95 @@
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a routerLink="/hero">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center" *ngIf="certification">
+
+                <div class="swiper-slide">
+                  <img src="{{certification.imageUrl}}" alt="">
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.jpg" alt="">
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Certificate information</h3>
+              <ul>
+                <li><strong>Category</strong>: {{certification.Categorys}}</li>
+                <li><strong>Name</strong>: {{certification.title}}</li>
+                <li><strong>Certificate date</strong>:{{certification.Date}}</li>
+                <li><strong>Certificate URL</strong>: <a href="{{certification.link}}">{{certification.link}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>{{certification.title}}</h2>
+              <p *ngFor=" let para of certification.paragraphs">
+                {{para}}
+                <!-- Modern web applications provide much of their functionality in an API. In this course, learned you how to design and implement such an API using ASP.NET Core 8. Get started with minimal APIs and the basics of HTTP, REST, and API design. Learn how to retrieve and write data, and practice what you learn with hands-on challenges. -->
+                <!-- Explore how to secure your API with authentication and authorization, and how to document it with OpenAPI. Finally, learn how to deploy your API to Azure and monitor its performance. -->
+              </p>
+          
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+    <!-- Portfolio Details Section -->
+  
+
+  </main>

@@ -27,9 +27,24 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/aos/dist/aos.css",
+              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
+              "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
+              "src/assets/vendor/aos/aos.css",
+              "src/assets/vendor/glightbox/css/glightbox.min.css",
+              "src/assets/vendor/swiper/swiper-bundle.min.css",
+              "src/assets/css/main.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+              "node_modules/aos/dist/aos.js" ,
+              "src/assets/vendor/aos/aos.js",
+              "src/assets/vendor/typed.js/typed.umd.js",
+              "src/assets/vendor/glightbox/js/glightbox.min.js",
+              "src/assets/vendor/swiper/swiper-bundle.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -97,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fadd6889-3fbb-4f57-ace2-3c3a6dcd21f0"
   }
 }
